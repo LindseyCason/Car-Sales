@@ -11,5 +11,13 @@ const Total = props => {
   );
 };
 
-export default connect(null,{})(Total);
+
+const mTSP = state =>{
+return{
+  car: state.car,
+  additionalPrice: state.additionalPrice
+}
+
+}
+export default connect(mTSP,{})(Total);
 //connection complete

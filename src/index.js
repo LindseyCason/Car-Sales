@@ -7,13 +7,11 @@ import { Provider } from "react-redux";
 import 'bulma/css/bulma.css';
 import './styles.scss';
 
-function reducer(){
-    return{
-        title: "Hello from inside index.js! Mock Reducer"
-    }
-}
+import rootReducer from "./reducer/myReducer"
 
-const store = createStore(reducer);
+const store = createStore(rootReducer);
 
 const rootElement = document.getElementById('root');
 ReactDOM.render(<Provider store={store}><App /></Provider>, rootElement);
+
+//reducer added with state info from App.js, moved over into reducer function
